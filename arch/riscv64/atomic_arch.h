@@ -48,3 +48,10 @@ static inline void *a_cas_p(volatile void *p, void *t, void *s)
 	}
 	return (void *) old;
 }
+
+#define a_crash a_crash
+static inline void a_crash()
+{
+	// 0xff615f6372617368 means "0xff + hex('a_crash')"
+	*(volatile char *)(0xff615f6372617368)=0;
+}
