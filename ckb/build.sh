@@ -12,7 +12,8 @@ CC="${CLANG}" CFLAGS="${BASE_CFLAGS}" \
     --disable-shared \
     --with-malloc=oldmalloc \
     --prefix=`pwd`/release
-make AR="${CLANG/clang/llvm-ar}" RANLIB="${CLANG/clang/llvm-ranlib}" install -j ${N_PROC}
+make AR="${CLANG/clang/llvm-ar}" RANLIB="${CLANG/clang/llvm-ranlib}" -j ${N_PROC}
+make AR="${CLANG/clang/llvm-ar}" RANLIB="${CLANG/clang/llvm-ranlib}" install
 rm -rf release/bin
 
 rm -rf release/lib/libgcc.a
