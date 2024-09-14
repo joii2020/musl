@@ -3,6 +3,7 @@ set -ex
 
 CLANG="${CLANG:-clang-18}"
 BASE_CFLAGS="${BASE_CFLAGS:---target=riscv64 -march=rv64imc_zba_zbb_zbc_zbs -DPAGE_SIZE=4096 -O3}"
+N_PROC="${N_PROC:-$(nproc)}"
 
 mkdir -p release
 CC="${CLANG}" CFLAGS="${BASE_CFLAGS}" \
@@ -11,6 +12,7 @@ CC="${CLANG}" CFLAGS="${BASE_CFLAGS}" \
     --disable-shared \
     --with-malloc=oldmalloc \
     --prefix=`pwd`/release
+make AR="${CLANG/clang/llvm-ar}" RANLIB="${CLANG/clang/llvm-ranlib}" -j ${N_PROC}
 make AR="${CLANG/clang/llvm-ar}" RANLIB="${CLANG/clang/llvm-ranlib}" install
 rm -rf release/bin
 
