@@ -2,8 +2,12 @@
 set -ex
 
 CLANG="${CLANG:-clang-18}"
-BASE_CFLAGS="${BASE_CFLAGS:---target=riscv64 -march=rv64imc_zba_zbb_zbc_zbs -DPAGE_SIZE=4096 -DDISABLE_STD_FLIE -O3}"
+BASE_CFLAGS="${BASE_CFLAGS:---target=riscv64 -march=rv64imc_zba_zbb_zbc_zbs -DPAGE_SIZE=4096  -O3}"
 N_PROC="${N_PROC:-$(nproc)}"
+
+if [[ ${DISABLE_STD_FILE} == "true" ]]; then
+  BASE_CFLAGS="${BASE_CFLAGS} -DDISABLE_STD_FLIE"
+fi
 
 mkdir -p release
 CC="${CLANG}" CFLAGS="${BASE_CFLAGS}" \
