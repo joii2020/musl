@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include "stdio_impl.h"
 #include "pthread_impl.h"
 #include <limits.h>
@@ -44,3 +45,4 @@ int ftrylockfile(FILE *f)
 	__register_locked_file(f, self);
 	return 0;
 }
+#endif // DISABLE_STD_FLIE

@@ -2,7 +2,7 @@
 set -ex
 
 CLANG="${CLANG:-clang-18}"
-BASE_CFLAGS="${BASE_CFLAGS:---target=riscv64 -march=rv64imc_zba_zbb_zbc_zbs -DPAGE_SIZE=4096 -O3}"
+BASE_CFLAGS="${BASE_CFLAGS:---target=riscv64 -march=rv64imc_zba_zbb_zbc_zbs -DPAGE_SIZE=4096 -DDISABLE_STD_FLIE -O3}"
 N_PROC="${N_PROC:-$(nproc)}"
 
 mkdir -p release

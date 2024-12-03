@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include "stdio_impl.h"
 #include <fcntl.h>
 #include <unistd.h>
@@ -51,3 +52,4 @@ fail:
 	fclose(f);
 	return NULL;
 }
+#endif // DISABLE_STD_FLIE

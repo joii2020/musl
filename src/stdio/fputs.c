@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include "stdio_impl.h"
 #include <string.h>
 
@@ -8,3 +9,4 @@ int fputs(const char *restrict s, FILE *restrict f)
 }
 
 weak_alias(fputs, fputs_unlocked);
+#endif // DISABLE_STD_FLIE

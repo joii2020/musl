@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #define _GNU_SOURCE
 #include "stdio_impl.h"
 #include <stdlib.h>
@@ -133,3 +134,4 @@ FILE *fopencookie(void *cookie, const char *mode, cookie_io_functions_t iofuncs)
 	/* Add new FILE to open file list */
 	return __ofl_add(&f->f);
 }
+#endif // DISABLE_STD_FLIE

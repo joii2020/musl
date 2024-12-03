@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include "stdio_impl.h"
 #include "locale_impl.h"
 #include <wchar.h>
@@ -66,3 +67,4 @@ wint_t fgetwc(FILE *f)
 
 weak_alias(__fgetwc_unlocked, fgetwc_unlocked);
 weak_alias(__fgetwc_unlocked, getwc_unlocked);
+#endif // DISABLE_STD_FLIE

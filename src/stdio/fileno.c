@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include "stdio_impl.h"
 #include <errno.h>
 
@@ -14,3 +15,4 @@ int fileno(FILE *f)
 }
 
 weak_alias(fileno, fileno_unlocked);
+#endif // DISABLE_STD_FLIE

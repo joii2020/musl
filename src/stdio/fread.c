@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include "stdio_impl.h"
 #include <string.h>
 
@@ -36,3 +37,4 @@ size_t fread(void *restrict destv, size_t size, size_t nmemb, FILE *restrict f)
 }
 
 weak_alias(fread, fread_unlocked);
+#endif // DISABLE_STD_FLIE

@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include "stdio_impl.h"
 #include <fcntl.h>
 #include <string.h>
@@ -29,3 +30,4 @@ FILE *fopen(const char *restrict filename, const char *restrict mode)
 	__syscall(SYS_close, fd);
 	return 0;
 }
+#endif // DISABLE_STD_FLIE

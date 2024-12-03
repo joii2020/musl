@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #define _GNU_SOURCE
 #include "stdio_impl.h"
 #include <string.h>
@@ -19,3 +20,4 @@ char *fgetln(FILE *f, size_t *plen)
 	FUNLOCK(f);
 	return ret;
 }
+#endif // DISABLE_STD_FLIE

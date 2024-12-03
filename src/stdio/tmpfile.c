@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include <stdio.h>
 #include <fcntl.h>
 #include <stdlib.h>
@@ -27,3 +28,4 @@ FILE *tmpfile(void)
 	}
 	return 0;
 }
+#endif // DISABLE_STD_FLIE

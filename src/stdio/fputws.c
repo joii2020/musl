@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include "stdio_impl.h"
 #include "locale_impl.h"
 #include <wchar.h>
@@ -27,3 +28,4 @@ int fputws(const wchar_t *restrict ws, FILE *restrict f)
 }
 
 weak_alias(fputws, fputws_unlocked);
+#endif // DISABLE_STD_FLIE

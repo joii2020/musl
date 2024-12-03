@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include "stdio_impl.h"
 
 int fgetpos(FILE *restrict f, fpos_t *restrict pos)
@@ -7,3 +8,4 @@ int fgetpos(FILE *restrict f, fpos_t *restrict pos)
 	*(long long *)pos = off;
 	return 0;
 }
+#endif // DISABLE_STD_FLIE

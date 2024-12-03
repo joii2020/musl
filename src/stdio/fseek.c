@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include "stdio_impl.h"
 #include <errno.h>
 
@@ -46,3 +47,4 @@ int fseek(FILE *f, long off, int whence)
 }
 
 weak_alias(__fseeko, fseeko);
+#endif // DISABLE_STD_FLIE

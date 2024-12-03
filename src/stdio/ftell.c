@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include "stdio_impl.h"
 #include <limits.h>
 #include <errno.h>
@@ -37,3 +38,4 @@ long ftell(FILE *f)
 }
 
 weak_alias(__ftello, ftello);
+#endif // DISABLE_STD_FLIE

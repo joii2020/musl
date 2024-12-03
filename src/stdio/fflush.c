@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include "stdio_impl.h"
 
 /* stdout.c will override this if linked */
@@ -45,3 +46,4 @@ int fflush(FILE *f)
 }
 
 weak_alias(fflush, fflush_unlocked);
+#endif // DISABLE_STD_FLIE

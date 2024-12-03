@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include "stdio_impl.h"
 #include <stdlib.h>
 
@@ -36,3 +37,4 @@ int fclose(FILE *f)
 
 	return r;
 }
+#endif // DISABLE_STD_FLIE

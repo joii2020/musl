@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include "stdio_impl.h"
 
 /* The behavior of this function is undefined except when it is the first
@@ -27,3 +28,4 @@ int setvbuf(FILE *restrict f, char *restrict buf, int type, size_t size)
 
 	return 0;
 }
+#endif // DISABLE_STD_FLIE

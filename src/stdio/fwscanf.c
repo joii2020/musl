@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include <stdio.h>
 #include <stdarg.h>
 #include <wchar.h>
@@ -13,3 +14,4 @@ int fwscanf(FILE *restrict f, const wchar_t *restrict fmt, ...)
 }
 
 weak_alias(fwscanf,__isoc99_fwscanf);
+#endif // DISABLE_STD_FLIE

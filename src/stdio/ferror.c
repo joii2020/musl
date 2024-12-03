@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include "stdio_impl.h"
 
 #undef ferror
@@ -12,3 +13,4 @@ int ferror(FILE *f)
 
 weak_alias(ferror, ferror_unlocked);
 weak_alias(ferror, _IO_ferror_unlocked);
+#endif // DISABLE_STD_FLIE

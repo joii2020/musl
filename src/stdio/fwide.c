@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include <wchar.h>
 #include "stdio_impl.h"
 #include "locale_impl.h"
@@ -14,3 +15,4 @@ int fwide(FILE *f, int mode)
 	FUNLOCK(f);
 	return mode;
 }
+#endif // DISABLE_STD_FLIE

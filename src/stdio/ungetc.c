@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include "stdio_impl.h"
 
 int ungetc(int c, FILE *f)
@@ -18,3 +19,4 @@ int ungetc(int c, FILE *f)
 	FUNLOCK(f);
 	return (unsigned char)c;
 }
+#endif // DISABLE_STD_FLIE

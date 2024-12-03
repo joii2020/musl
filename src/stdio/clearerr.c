@@ -1,3 +1,4 @@
+#ifndef DISABLE_STD_FLIE
 #include "stdio_impl.h"
 
 void clearerr(FILE *f)
@@ -8,3 +9,4 @@ void clearerr(FILE *f)
 }
 
 weak_alias(clearerr, clearerr_unlocked);
+#endif // DISABLE_STD_FLIE
